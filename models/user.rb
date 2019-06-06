@@ -3,14 +3,15 @@ class User
 
     def initialize(username)
         @username = username
+        @tweets = []
     end
 
     def tweets
-        #save for later
+        @tweets
     end
 
-    def post_tweets
-        #save for later
+    def post_tweet(msg)
+        Tweet.new(msg, self)
     end
 
 end

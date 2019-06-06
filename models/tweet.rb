@@ -6,6 +6,7 @@ class Tweet
     def initialize(message, user)
         @message = message
         @user = user
+        @user.tweets << self
         @@tweets << self
     end
 
