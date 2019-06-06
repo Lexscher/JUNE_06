@@ -7,7 +7,7 @@ class User
     end
 
     def tweets
-        @tweets
+        Tweet.all.select { |tweet| tweet.user == self }
     end
 
     def post_tweet(msg)
