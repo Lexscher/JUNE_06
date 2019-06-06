@@ -1,8 +1,16 @@
 class Tweet
-    attr_reader :content
+    attr_reader :message, :user
 
-    def initialize(content)
-        @content = content
+    @@tweets = []
+
+    def initialize(message, user)
+        @message = message
+        @user = user
+        @@tweets << self
+    end
+
+    def self.all
+        @@tweets
     end
 
     def User
