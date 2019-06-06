@@ -13,8 +13,8 @@ class Tweet
         @@tweets
     end
 
-    def User
-        self
+    def username
+        @user.username
     end
 
 end
